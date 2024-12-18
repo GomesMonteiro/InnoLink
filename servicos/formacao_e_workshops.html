@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnoLink</title>
+  <script>
+    // Aplique o tema antes do carregamento completo da página
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+  <!-- FontAwesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+</head>
+<body class="bg-lightBg dark:bg-darkBg text-lightText dark:text-darkText transition-colors duration-500" id="body">
+ 
+
+  <!-- Menu de Navegação -->
+  <nav class="bg-lightBg dark:bg-darkBg shadow-md fixed w-full z-10">
+ 
+    <div class="container mx-auto px-4 flex justify-between items-center py-4">
+      <!-- Logo -->
+      <a href="../index.html" class="text-2xl font-bold text-primary dark:text-white">InnoLink</a>
+
+      <!-- Menu Links -->
+      <div class="hidden md:flex space-x-6">
+        <a href="../index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Home</a>
+        <a href="../sobre.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Sobre</a>
+        <a href="../servicos.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Serviços</a>
+        <a href="../blog.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Blog</a>
+        <a href="../cursos.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Cursos</a>
+        <a href="../contacto.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Contato</a>
+      </div>
+
+      <!-- Toggle de Tema -->
+      <button id="theme-toggle" class="p-2 rounded">
+        <i id="theme-icon" class="fas fa-sun text-xl"></i>
+      </button>
+      
+
+      <!-- Botão Mobile -->
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 shadow-md">
+      <a href="../index.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
+      <a href="../sobre.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Sobre</a>
+      <a href="../servicos.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Serviços</a>
+      <a href="../blog.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Blog</a>
+      <a href="../cursos.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Cursos</a>
+      <a href="../contacto.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Contato</a>
+    </div>
+  </nav>
+
+  <!-- detalhes sobre a empresa-->
+  <section id="sobre" class="py-20 ">
+    <div class="container py-6 mx-auto px-4 ">
+    <h1 class="text-4xl font-bold text-gray-800 dark:text-white mb-12 text-center">Formação e Workshops</h1>
+      <p class="text-lg font-semiblod text-gray-800 dark:text-gray-300 mb-12 text-justify">
+        Oferecemos formação personalizada e workshops especializados para empresas e profissionais que buscam aprimorar suas habilidades
+         em marketing digital, inovação e transformação digital. As nossas soluções 
+        de educação são desenhadas para oferecer o máximo de valor e impacto.  </p>
+    <p class="text-lg font-semiblod text-gray-800 dark:text-gray-300 mb-12 text-justify">
+      <strong>Benefícios:</strong>  <br>
+      <li>Capacitação prática e aplicada sobre temas relevantes para o mercado atual.</li>
+      <li>Desenvolvimento de habilidades essenciais para o crescimento profissional e empresarial.</li>
+      <li>Aulas ministradas por especialistas com experiência no mercado digital.</li>
+    <li>Aprimoramento contínuo das equipes para enfrentar os desafios digitais.</li>
+    </p>
+    <p class="text-lg font-semiblod text-gray-800 dark:text-gray-300 mb-12 text-justify">
+        <strong>Aplicação ou estratégias</strong>  <br>
+        <li><strong>  Workshops sobre marketing digital:</strong> estratégias de redes sociais, SEO, marketing de conteúdo.</li>
+        <li><strong> Formação em transformação digital: </strong> como adotar novas tecnologias em empresas.</li>
+        <li><strong> Sessões de treinamento em ferramentas digitais</strong> como Google Analytics, SEMrush, entre outras.</li>
+     
+      </p>
+      <div class="w-64 mx-auto py-20">
+        <a href="consultoria.html" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition ease-in-out duration-300 transform hover:scale-105">
+            Solicite uma Consultoria
+    </a>
+      </div>
+  </div>
+  </section>
+  
+  <!--Membros da empresa-->
+  <section id="testimonials" class="py-16 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-12">Nossa equipa</h2>
+      
+      <div class="flex flex-wrap justify-center gap-8">
+        <!-- membros1 -->
+        <div class="max-w-sm p-6 bg-white rounded-lg shadow-lg dark:bg-gray-700 hover:scale-105 transform transition duration-300">
+          <img src="../multimedia/img/depoimento.jpg" alt="Cliente 1" class="w-24 h-24 mx-auto rounded-full mb-4">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">João Silva</h3>
+          <p class="text-gray-500 dark:text-gray-400 italic">CEO, Empresa X</p>
+        </div>
+  
+        <!-- membro 2 -->
+        <div class="max-w-sm p-6 bg-white rounded-lg shadow-lg dark:bg-gray-700 hover:scale-105 transform transition duration-300">
+          <img src="../multimedia/img/depoimento.jpg" alt="Cliente 2" class="w-24 h-24 mx-auto rounded-full mb-4">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Mário Oliveira</h3>
+           <p class="text-gray-500 dark:text-gray-400 italic">Co-fundadora, Empresa Y</p>
+        </div>
+  
+        <!-- membro 3 -->
+        <div class="max-w-sm p-6 bg-white rounded-lg shadow-lg dark:bg-gray-700 hover:scale-105 transform transition duration-300">
+          <img src="../multimedia/img/depoimento.jpg" alt="Cliente 3" class="w-24 h-24 mx-auto rounded-full mb-4">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Lucas Pereira</h3>
+            <p class="text-gray-500 dark:text-gray-400 italic">Diretor de Marketing, Empresa Z</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!--Parceiros logotipos-->
+  <section id="parcerias" class="py-16 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-12">Parcerias e Reconhecimentos</h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">Estamos orgulhosos de trabalhar com empresas e organizações líderes do setor.</p>
+  
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-12 items-center">
+        <!-- Logo 1 -->
+        <div class="flex justify-center">
+          <img src="https://via.placeholder.com/150x50?text=Logo+1" alt="Parceiro 1" class="max-h-12 object-contain grayscale hover:grayscale-0 transition duration-300">
+        </div>
+  
+        <!-- Logo 2 -->
+        <div class="flex justify-center">
+          <img src="https://via.placeholder.com/150x50?text=Logo+2" alt="Parceiro 2" class="max-h-12 object-contain grayscale hover:grayscale-0 transition duration-300">
+        </div>
+  
+        <!-- Logo 3 -->
+        <div class="flex justify-center">
+          <img src="https://via.placeholder.com/150x50?text=Logo+3" alt="Parceiro 3" class="max-h-12 object-contain grayscale hover:grayscale-0 transition duration-300">
+        </div>
+  
+        <!-- Logo 4 -->
+        <div class="flex justify-center">
+          <img src="https://via.placeholder.com/150x50?text=Logo+4" alt="Parceiro 4" class="max-h-12 object-contain grayscale hover:grayscale-0 transition duration-300">
+        </div>
+  
+        <!-- Logo 5 -->
+        <div class="flex justify-center">
+          <img src="https://via.placeholder.com/150x50?text=Logo+5" alt="Parceiro 5" class="max-h-12 object-contain grayscale hover:grayscale-0 transition duration-300">
+        </div>
+  
+        <!-- Logo 6 -->
+        <div class="flex justify-center">
+          <img src="https://via.placeholder.com/150x50?text=Logo+6" alt="Parceiro 6" class="max-h-12 object-contain grayscale hover:grayscale-0 transition duration-300">
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Links úteis -->
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">InnoLink</h3>
+          <ul class="space-y-3 text-gray-400">
+            <li><a href="../definicao/termos_de_uso.html" class="hover:text-blue-400 transition duration-300">Termos de uso</a></li>
+            <li><a href="../definicao/politica_de_privacidade.html" class="hover:text-blue-400 transition duration-300">Política de Privacidade</a></li>
+         
+          </ul>
+        </div>
+  
+        <!-- Formulário de Assinatura -->
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">Assine nossa Newsletter</h3>
+          <p class="text-gray-400 mb-4">Receba novidades e atualizações diretamente em seu e-mail.</p>
+          <form action="#" method="POST" class="flex flex-col md:flex-row gap-4">
+            <input type="email" placeholder="Digite seu e-mail" class="px-4 py-2 rounded-lg border border-gray-600 bg-gray-900 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-full md:w-64">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+              Assinar
+            </button>
+          </form>
+        </div>
+  
+        <!-- Redes sociais -->
+        <div class="flex justify-center space-x-6 md:justify-end">
+          <a href="https://www.facebook.com" target="_blank" class="text-gray-400 hover:text-blue-400 transition duration-300">
+            <i class="fab fa-facebook-f text-xl"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="text-gray-400 hover:text-blue-400 transition duration-300">
+            <i class="fab fa-twitter text-xl"></i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" class="text-gray-400 hover:text-blue-400 transition duration-300">
+            <i class="fab fa-instagram text-xl"></i>
+          </a>
+        </div>
+      </div>
+      <div class="mt-12 text-center text-gray-400">
+        <p>&copy; 2024 InnoLink. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Conteúdo -->
+
+
+  <!-- Scripts -->
+<script src="../js/scripts.js"></script>
+</body>
+</html>

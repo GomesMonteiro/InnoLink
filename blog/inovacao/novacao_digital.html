@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InnoLink</title>
+  <script>
+    // Aplique o tema antes do carregamento completo da página
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+  <!-- FontAwesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+</head>
+<body class="bg-lightBg dark:bg-darkBg text-lightText dark:text-darkText transition-colors duration-500" id="body">
+ 
+
+  <!-- Menu de Navegação -->
+  <nav class="bg-lightBg dark:bg-darkBg shadow-md fixed w-full z-10">
+ 
+    <div class="container mx-auto px-4 flex justify-between items-center py-4">
+      <!-- Logo -->
+      <a href="index.html" class="text-2xl font-bold text-primary dark:text-white">InnoLink</a>
+
+      <!-- Menu Links -->
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Home</a>
+        <a href="sobre.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Sobre</a>
+        <a href="servicos.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Serviços</a>
+        <a href="blog.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Blog</a>
+        <a href="cursos.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Cursos</a>
+        <a href="contacto.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Contato</a>
+      </div>
+
+        <!-- Barra de Pesquisa -->
+<div class="relative flex items-center">
+  <input
+    type="text"
+    placeholder="Pesquisar..."
+    class="px-4 py-2 rounded-full border border-gray-300 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 w-64 md:w-auto"
+  />
+  <button type="submit" class="absolute right-2 text-gray-500">
+    <i class="fas fa-search"></i>
+  </button>
+</div>
+      <!-- Toggle de Tema -->
+      <button id="theme-toggle" class="p-2 rounded">
+        <i id="theme-icon" class="fas fa-sun text-xl"></i>
+      </button>
+      
+
+      <!-- Botão Mobile -->
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 shadow-md">
+      <a href="index.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
+      <a href="sobre.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Sobre</a>
+      <a href="servicos.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Serviços</a>
+      <a href="blog.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Blog</a>
+      <a href="cursos.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Cursos</a>
+      <a href="contacto.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Contato</a>
+    </div>
+  </nav>
+
+
+<!-- Seção do Blog -->
+<section id="blog" class="py-16 bg-gray-50 dark:bg-gray-800">
+  <div class="container mx-auto px-6 py-16 text-center">
+      <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-12">Blog InnoLink</h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">Fique por dentro dos últimos artigos e dicas sobre como alavancar seu negócio e crescer na era digital.</p>
+      <h3 class="text-4xl font-bold text-gray-800 dark:text-white mb-12">Categorias</h3>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+          <!-- Artigo 1 -->
+          <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <img src="multimedia/img/service1.jpg" alt="Artigo 1" class="w-full h-48 object-cover rounded-t-lg">
+              <div class="p-6">
+                  <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Marketing</h3>
+               
+                  <a href="blog/marketing/marketing_digital.html" class="text-blue-500 hover:text-blue-700 transition-colors">Leia mais &rarr;</a>
+              </div>
+          </div>
+
+          <!-- Artigo 2 -->
+          <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <img src="multimedia/img/service2.jpg" alt="Artigo 2" class="w-full h-48 object-cover rounded-t-lg">
+              <div class="p-6">
+                  <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Tendências de marketing digital para 2024</h3>
+                 
+                  <a href="blog/inovacao/novacao_digital.html" class="text-blue-500 hover:text-blue-700 transition-colors">Leia mais &rarr;</a>
+              </div>
+          </div>
+
+          <!-- Artigo 3 -->
+          <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <img src="multimedia/img/service3.jpg" alt="Artigo 3" class="w-full h-48 object-cover rounded-t-lg">
+              <div class="p-6">
+                  <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Como otimizar o SEO para 2024</h3>
+                
+                  <a href="blog/marketing/marketing_digital.html" class="text-blue-500 hover:text-blue-700 transition-colors">Leia mais &rarr;</a>
+              </div>
+          </div>
+          <!-- Artigo 4 -->
+          <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <img src="multimedia/img/service1.jpg" alt="Artigo 1" class="w-full h-48 object-cover rounded-t-lg">
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Marketing</h3>
+             
+                <a href="blog/marketing/marketing_digital.html" class="text-blue-500 hover:text-blue-700 transition-colors">Leia mais &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Artigo 5 -->
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <img src="multimedia/img/service2.jpg" alt="Artigo 2" class="w-full h-48 object-cover rounded-t-lg">
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Tendências de marketing digital para 2024</h3>
+               
+                <a href="blog/inovacao/novacao_digital.html" class="text-blue-500 hover:text-blue-700 transition-colors">Leia mais &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Artigo 6 -->
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <img src="multimedia/img/service3.jpg" alt="Artigo 3" class="w-full h-48 object-cover rounded-t-lg">
+            <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Como otimizar o SEO para 2024</h3>
+              
+                <a href="blog/marketing/marketing_digital.html" class="text-blue-500 hover:text-blue-700 transition-colors">Leia mais &rarr;</a>
+            </div>
+        </div>
+        <!-- Artigo 7 -->
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <img src="multimedia/img/service1.jpg" alt="Artigo 1" class="w-full h-48 object-cover rounded-t-lg">
+          <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Marketing</h3>
+           
+              <a href="blog/marketing/marketing_digital.html" class="text-blue-500 hover:text-blue-700 transition-colors">Leia mais &rarr;</a>
+          </div>
+      </div>
+
+      <!-- Artigo 8 -->
+      <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <img src="multimedia/img/service2.jpg" alt="Artigo 2" class="w-full h-48 object-cover rounded-t-lg">
+          <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Tendências de marketing digital para 2024</h3>
+             
+              <a href="blog/inovacao/novacao_digital.html" class="text-blue-500 hover:text-blue-700 transition-colors">Leia mais &rarr;</a>
+          </div>
+      </div>
+
+      <!-- Artigo 9 -->
+      <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <img src="multimedia/img/service3.jpg" alt="Artigo 3" class="w-full h-48 object-cover rounded-t-lg">
+          <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Como otimizar o SEO para 2024</h3>
+            
+              <a href="blog/marketing/marketing_digital.html" class="text-blue-500 hover:text-blue-700 transition-colors">Leia mais &rarr;</a>
+          </div>
+      </div>
+      </div>
+
+    
+  </div>
+</section>
+
+  <!--Parceiros logotipos-->
+  <section id="parcerias" class="py-16 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-12">Parcerias e Reconhecimentos</h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">Estamos orgulhosos de trabalhar com empresas e organizações líderes do setor.</p>
+  
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-12 items-center">
+        <!-- Logo 1 -->
+        <div class="flex justify-center">
+          <img src="https://via.placeholder.com/150x50?text=Logo+1" alt="Parceiro 1" class="max-h-12 object-contain grayscale hover:grayscale-0 transition duration-300">
+        </div>
+  
+        <!-- Logo 2 -->
+        <div class="flex justify-center">
+          <img src="https://via.placeholder.com/150x50?text=Logo+2" alt="Parceiro 2" class="max-h-12 object-contain grayscale hover:grayscale-0 transition duration-300">
+        </div>
+  
+        <!-- Logo 3 -->
+        <div class="flex justify-center">
+          <img src="https://via.placeholder.com/150x50?text=Logo+3" alt="Parceiro 3" class="max-h-12 object-contain grayscale hover:grayscale-0 transition duration-300">
+        </div>
+  
+        <!-- Logo 4 -->
+        <div class="flex justify-center">
+          <img src="https://via.placeholder.com/150x50?text=Logo+4" alt="Parceiro 4" class="max-h-12 object-contain grayscale hover:grayscale-0 transition duration-300">
+        </div>
+  
+        <!-- Logo 5 -->
+        <div class="flex justify-center">
+          <img src="https://via.placeholder.com/150x50?text=Logo+5" alt="Parceiro 5" class="max-h-12 object-contain grayscale hover:grayscale-0 transition duration-300">
+        </div>
+  
+        <!-- Logo 6 -->
+        <div class="flex justify-center">
+          <img src="https://via.placeholder.com/150x50?text=Logo+6" alt="Parceiro 6" class="max-h-12 object-contain grayscale hover:grayscale-0 transition duration-300">
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Links úteis -->
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">InnoLink</h3>
+          <ul class="space-y-3 text-gray-400">
+            <li><a href="definicao/termos_de_uso.html" class="hover:text-blue-400 transition duration-300">Termos de uso</a></li>
+            <li><a href="definicao/politica_de_privacidade.html" class="hover:text-blue-400 transition duration-300">Política de Privacidade</a></li>
+         
+          </ul>
+        </div>
+  
+        <!-- Formulário de Assinatura -->
+        <div>
+          <h3 class="text-2xl font-semibold mb-4">Assine nossa Newsletter</h3>
+          <p class="text-gray-400 mb-4">Receba novidades e atualizações diretamente em seu e-mail.</p>
+          <form action="#" method="POST" class="flex flex-col md:flex-row gap-4">
+            <input type="email" placeholder="Digite seu e-mail" class="px-4 py-2 rounded-lg border border-gray-600 bg-gray-900 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-full md:w-64">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+              Assinar
+            </button>
+          </form>
+        </div>
+  
+        <!-- Redes sociais -->
+        <div class="flex justify-center space-x-6 md:justify-end">
+          <a href="https://www.facebook.com" target="_blank" class="text-gray-400 hover:text-blue-400 transition duration-300">
+            <i class="fab fa-facebook-f text-xl"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="text-gray-400 hover:text-blue-400 transition duration-300">
+            <i class="fab fa-twitter text-xl"></i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" class="text-gray-400 hover:text-blue-400 transition duration-300">
+            <i class="fab fa-instagram text-xl"></i>
+          </a>
+        </div>
+      </div>
+      <div class="mt-12 text-center text-gray-400">
+        <p>&copy; 2024 InnoLink. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Conteúdo -->
+
+
+  <!-- Scripts -->
+<script src="js/scripts.js"></script>
+</body>
+</html>
