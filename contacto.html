@@ -18,6 +18,9 @@
 
 
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
   <script src="https://cdn.tailwindcss.com"></script>
   
 </head>
@@ -65,138 +68,79 @@
       <a href="contacto.html" class="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Contato</a>
     </div>
   </nav>
+ <!-- Seção de Contato -->
+ <section class="py-20 bg-gray-50 dark:bg-gray-800">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-8">Entre em Contato</h2>
+    <p class="text-lg text-gray-600 dark:text-gray-300 mb-12">Preencha o formulário abaixo para nos enviar uma mensagem.</p>
+    
+    <form action="#" method="POST" class="max-w-2xl mx-auto bg-white dark:bg-gray-700 rounded-lg shadow-md p-8">
+      <div class="mb-4">
+        <label for="name" class="block text-left text-gray-800 dark:text-gray-300 mb-2">Nome</label>
+        <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-left text-gray-800 dark:text-gray-300 mb-2">Email</label>
+        <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div class="mb-4">
+        <label for="subject" class="block text-left text-gray-800 dark:text-gray-300 mb-2">Assunto</label>
+        <input type="text" id="subject" name="subject" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div class="mb-4">
+        <label for="message" class="block text-left text-gray-800 dark:text-gray-300 mb-2">Mensagem</label>
+        <textarea id="message" name="message" rows="6" required class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      </div>
+      <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">Enviar Mensagem</button>
+    </form>
+  </div>
+</section>
+<div class="mx-auto p-8 bg-white dark:bg-gray-900 shadow-xl rounded-lg">
+  <h2 class="text-4xl font-extrabold text-center mb-8 text-gray-900 dark:text-gray-100">Informações de Contato</h2>
 
-  <!-- conteudo -->
-  <section id="slider" class="relative min-h-[600px] bg-gray-200 dark:bg-gray-700 overflow-hidden">
-    <!-- Imagem de fundo -->
-    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('multimedia/img/fundo.jpg');"></div>
-  
-    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-center text-white px-4 md:px-6 lg:px-12">
-      <div class="animate-slide">
-        <h2 class="text-4xl font-bold mb-4">Transforme Ideias em Resultados</h2>
-        <p class="mt-2 mb-6">Soluções inovadoras para o seu negócio.</p>
-        <a href="servicos.html" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition ease-in-out duration-300 transform hover:scale-105">
-            Conheça nossos serviços
-        </a>
-      </div>
-    </div>
-  </section>
-  <section id="services" class="py-16 bg-gray-100 dark:bg-gray-800">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-semibold mb-8 text-gray-800 dark:text-white">Serviços em Destaque</h2>
-      <p class="text-lg text-gray-600 dark:text-gray-300 mb-12">Visite nossa seção de serviços e descubra como podemos ajudar a transformar seus projetos e ideias em grandes resultados.</p>
+  <div class="space-y-6">
+    <!-- Email -->
+    <div class="flex items-center space-x-5">
       
-      <!-- Grid de Serviços -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- Serviço 1 -->
-        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-          <img src="multimedia/img/service1.jpg" alt="Serviço 1" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Marketing</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">Transforme sua marca com estratégias de marketing criativas e eficazes. Conquiste novos mercados e aumente sua presença digital!</p>
-            <a href="servicos.html" class="text-blue-500 hover:text-blue-700 transition-colors">Saiba mais &rarr;</a>
-          </div>
-        </div>
-  
-        <!-- Serviço 2 -->
-        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-          <img src="multimedia/img/service2.jpg" alt="Serviço 2" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4"> Estratégias digitais </h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">Potencialize sua empresa com estratégias digitais personalizadas. Atraia, engaje e converta clientes de forma inteligente e eficiente.</p>
-            <a href="servicos.html" class="text-blue-500 hover:text-blue-700 transition-colors">Saiba mais &rarr;</a>
-          </div>
-        </div>
-  
-        <!-- Serviço 3 -->
-        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-          <img src="multimedia/img/service3.jpg" alt="Serviço 3" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Inovação</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">Inove para crescer! Descubra soluções criativas que impulsionam seu negócio e proporcionam vantagens competitivas no mercado.</p>
-            <a href="servicos.html" class="text-blue-500 hover:text-blue-700 transition-colors">Saiba mais &rarr;</a>
-          </div>
-        </div>
-  
-      </div>
+      <svg xmlns="http://www.w3.org/2000/svg"  class="w-7 h-7 text-blue-600 transition-transform duration-300 transform hover:scale-110" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+      </svg>
+      <a href="mailto:paulinocungamonteiro34@gmail.com" class="text-xl text-blue-600 hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500">paulinocungamonteiro34@gmail.com</a>
     </div>
-  </section>
-  
-  
-  <section id="testimonials" class="py-16 bg-gray-50 dark:bg-gray-800">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-12">Depoimentos e Casos de Sucesso</h2>
+    
+    <!-- telefone -->
+    <div class="flex items-center space-x-5">
+     
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-green-600 transition-transform duration-300 transform hover:scale-110" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
+      </svg>
       
-      <div class="flex flex-wrap justify-center gap-8">
-        <!-- Testimonial 1 -->
-        <div class="max-w-sm p-6 bg-white rounded-lg shadow-lg dark:bg-gray-700 hover:scale-105 transform transition duration-300">
-          <img src="multimedia/img/depoimento.jpg" alt="Cliente 1" class="w-24 h-24 mx-auto rounded-full mb-4">
-          <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">João Silva</h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">"A InnoLink foi fundamental para nossa evolução digital. Graças às suas soluções inovadoras, conseguimos alcançar novos patamares de sucesso."</p>
-          <p class="text-gray-500 dark:text-gray-400 italic">CEO, Empresa X</p>
-        </div>
-  
-        <!-- Testimonial 2 -->
-        <div class="max-w-sm p-6 bg-white rounded-lg shadow-lg dark:bg-gray-700 hover:scale-105 transform transition duration-300">
-          <img src="multimedia/img/depoimento.jpg" alt="Cliente 2" class="w-24 h-24 mx-auto rounded-full mb-4">
-          <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Mário Oliveira</h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">"Excelente serviço! As estratégias de marketing digital da InnoLink transformaram a forma como nos conectamos com nossos clientes."</p>
-          <p class="text-gray-500 dark:text-gray-400 italic">Co-fundadora, Empresa Y</p>
-        </div>
-  
-        <!-- Testimonial 3 -->
-        <div class="max-w-sm p-6 bg-white rounded-lg shadow-lg dark:bg-gray-700 hover:scale-105 transform transition duration-300">
-          <img src="multimedia/img/depoimento.jpg" alt="Cliente 3" class="w-24 h-24 mx-auto rounded-full mb-4">
-          <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Lucas Pereira</h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">"Trabalhar com a InnoLink foi uma experiência incrível. Eles realmente entendem as necessidades do cliente e oferecem soluções precisas e eficazes."</p>
-          <p class="text-gray-500 dark:text-gray-400 italic">Diretor de Marketing, Empresa Z</p>
-        </div>
-      </div>
+      <a href="tel:+244 949784047" class="text-xl text-green-600 hover:text-green-800 focus:outline-none focus:ring-2 focus:ring-green-500">+244 949 784 047</a>
     </div>
-  </section>
-  <section id="blog-resources" class="py-16 bg-gray-50 dark:bg-gray-800">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-12">Blog e Recursos</h2>
-      <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">Fique atualizado com os nossos últimos artigos e materiais educativos para impulsionar o seu negócio.</p>
-  
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-        <!-- Article 1 -->
-        <div class="bg-white rounded-lg shadow-lg dark:bg-gray-700 hover:scale-105 transform transition duration-300">
-          <img src="multimedia/img/service1.jpg" alt="Artigo 1" class="w-full h-48 object-cover rounded-t-lg">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Como otimizar seu marketing digital</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">Aprenda as melhores estratégias para melhorar sua presença online e engajar seu público de maneira eficaz.</p>
-            <a href="blog.html" class="text-blue-500 hover:text-blue-600 font-semibold">Leia mais</a>
-          </div>
-        </div>
-  
-        <!-- Article 2 -->
-        <div class="bg-white rounded-lg shadow-lg dark:bg-gray-700 hover:scale-105 transform transition duration-300">
-          <img src="multimedia/img/service3.jpg" alt="Artigo 2" class="w-full h-48 object-cover rounded-t-lg">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">A importância da inovação nas empresas</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">Entenda como a inovação pode ser um fator chave para o sucesso no mercado competitivo de hoje.</p>
-            <a href="blog.html" class="text-blue-500 hover:text-blue-600 font-semibold">Leia mais</a>
-          </div>
-        </div>
-  
-        <!-- Article 3 -->
-        <div class="bg-white rounded-lg shadow-lg dark:bg-gray-700 hover:scale-105 transform transition duration-300">
-          <img src="multimedia/img/service2.jpg" alt="Artigo 3" class="w-full h-48 object-cover rounded-t-lg">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Estratégias eficazes de SEO para 2024</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">Melhore o seu ranking no Google com técnicas avançadas de SEO para 2024 e além.</p>
-            <a href="blog.html" class="text-blue-500 hover:text-blue-600 font-semibold">Leia mais</a>
-          </div>
-        </div>
-      </div>
-  
-      <div class="mt-12">
-        <a href="blog.html" class="text-blue-500 hover:text-blue-600 font-semibold text-lg">Ver mais artigos</a>
-      </div>
+
+    <!-- endereço -->
+    <div class="flex items-center space-x-5">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-red-600 transition-transform duration-300 transform hover:scale-110"  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+      </svg>
+      
+      <p class="text-xl text-gray-700 dark:text-gray-300">Rua Maianga, 123, Luanda, Angola</p>
     </div>
-  </section>
+  </div>
+</div>
+<div id="map" class="relative overflow-hidden rounded-lg shadow-lg">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7884.742186370485!2d13.230451908671794!3d-8.8449996232751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-PT!2sao!4v1736248456453!5m2!1spt-PT!2sao"
+    width="600"
+    height="450"
+    class="w-full h-96 border-0"
+    style="filter: brightness(0.9);"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</div>
+
   <!--Parceiros logotipos-->
   <section id="parcerias" class="py-16 bg-gray-50 dark:bg-gray-800">
     <div class="container mx-auto px-6 text-center">

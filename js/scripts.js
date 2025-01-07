@@ -98,3 +98,61 @@ document.getElementById('share-button').addEventListener('click', function() {
       console.error('Erro ao copiar o link: ', err);
   });
 });
+
+//filtrar cursos pagos e gratuitos
+
+function filterCourses(type) {
+  const courses = document.querySelectorAll('.course');
+  courses.forEach(course => {
+    course.style.display = course.classList.contains(type) ? 'block' : 'none';
+  });
+}
+
+//partilhar curso em diferentes redes socias
+
+(function () {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.classList.add('dark');
+  }
+})();
+
+function shareOnSocialMedia(platform) {
+  const url = window.location.href;
+  let shareUrl = '';
+
+  switch (platform) {
+    case 'facebook':
+      shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+      break;
+    case 'twitter':
+      shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=Confira este curso incrível!`;
+      break;
+    case 'instagram':
+      alert('Instagram não suporta compartilhamento via web diretamente.');
+      return;
+    case 'telegram':
+      shareUrl = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=Confira este curso incrível!`;
+      break;
+    case 'whatsapp':
+      shareUrl = `https://api.whatsapp.com/send?text=Confira este curso incrível! ${encodeURIComponent(url)}`;
+      break;
+    default:
+      return;
+  }
+
+  window.open(shareUrl, '_blank', 'width=600,height=400');
+}
+
+//mapa
+
+var map = L.map('map').setView([51.505, -0.09], 13);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+L.marker([51.505, -0.09]).addTo(map)
+  .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+  .openPopup();
